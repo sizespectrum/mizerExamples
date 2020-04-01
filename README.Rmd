@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# mizerExamples
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/mizerExamples)](https://CRAN.R-project.org/package=mizerExamples)
+<!-- badges: end -->
+
+The goal of mizerExamples is to provide mizer users a way to share their 
+models. 
+
+If you have a model to contribute, just email gustav.delius@york.ac.uk.
+
+## Installation
+
+You can install the current version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sizespectrum/mizerExamples")
+```
+## Example
+
+```{r example}
+library(mizer)
+library(mizerExamples)
+data("Benguela_params")
+plot(Benguela_params)
+```
+

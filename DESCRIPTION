@@ -1,0 +1,21 @@
+Package: mizerExamples
+Title: A crowd-sourced repository of mizer size-spectrum models for various ecosystems
+Version: 0.0.0.9000
+Author: mizer users worldwide
+Maintainer: Gustav Delius <gustav.delius@york.ac.uk>
+Description: Please contribute your mizer model for others to explore and give feedback on
+License: GPL-3
+Imports:
+    mizer (>= 1.0.1.9001)
+Suggests: 
+    pkgdown,
+    rmarkdown,
+    roxygen2,
+    testthat
+Collate:
+    data.R
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.2
+URL: https://github.com/sizespectrum/mizerExamples
+BugReports: https://github.com/sizespectrum/mizerExamples/issues
