@@ -11,7 +11,7 @@ Suggests:
     pkgdown,
     rmarkdown,
     roxygen2,
-    testthat
+    testthat (>= 2.1.0)
 Collate:
     data.R
 Encoding: UTF-8
