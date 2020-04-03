@@ -33,12 +33,12 @@ You can install the current version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("sizespectrum/mizerExamples")
 ```
+
 ## Example
 
 ```{r example}
 library(mizer)
 library(mizerExamples)
-data("Benguela_params")
 plot(Benguela_params)
 ```
 

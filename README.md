@@ -32,7 +32,6 @@ devtools::install_github("sizespectrum/mizerExamples")
 ``` r
 library(mizer)
 library(mizerExamples)
-data("Benguela_params")
 plot(Benguela_params)
 ```
 

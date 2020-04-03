@@ -1,28 +1,30 @@
-library(mizer)
+# Explicit `context()` still needed, see https://github.com/r-lib/vdiffr/issues/71
+context("data")
+
 test_that("Example params objects are projected correctly", {
-    data(Baltic_params)
     sim <- project(Baltic_params, t_max = 0.3, t_save = 0.3,
                    effort = c(small = 0.3, medium = 0.3, large = 0.7))
-    expect_equal(sim@n[2, , ], Baltic_params@initial_n[, ])
+    p <- plotSpectra(sim)
+    vdiffr::expect_doppelganger("Plot Baltic_params", p)
     
-    data(Barents_params)
     sim <- project(Barents_params, t_max = 0.3, t_save = 0.3,
                    effort = c(small = 1.1, medium = 0.5, large = 0.75))
-    expect_equal(sim@n[2, , ], Barents_params@initial_n[, ])
+    p <- plotSpectra(sim)
+    vdiffr::expect_doppelganger("Plot Barents_params", p)
     
-    data(Benguela_params)
     sim <- project(Benguela_params, t_max = 0.3, t_save = 0.3,
                    effort = c(small = 0.13, medium = 0.05, large = 0.45))
-    expect_equal(sim@n[2, , ], Benguela_params@initial_n[, ])
+    p <- plotSpectra(sim)
+    vdiffr::expect_doppelganger("Plot Benguela_params", p)
     
-    data(NEUSCS_params)
     sim <- project(NEUSCS_params, t_max = 0.3, t_save = 0.3,
                    effort = c(small = 0.4, medium = 0.3, large = 0.25))
-    expect_equal(sim@n[2, , ], NEUSCS_params@initial_n[, ])
+    p <- plotSpectra(sim)
+    vdiffr::expect_doppelganger("Plot NEUSCS_params", p)
     
-    data(NorthSea_params)
     sim <- project(NorthSea_params, t_max = 0.3, t_save = 0.3,
                    effort = c(small = 0.6, medium = 0.6, large = 1.25))
-    expect_equal(sim@n[2, , ], NorthSea_params@initial_n[, ])
+    p <- plotSpectra(sim)
+    vdiffr::expect_doppelganger("NorthSea_params", p)
     
 })

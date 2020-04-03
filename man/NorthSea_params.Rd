@@ -4,7 +4,9 @@
 \name{NorthSea_params}
 \alias{NorthSea_params}
 \title{Example MizerParams object for the North Sea with 10 species.}
-\format{A MizerParams object}
+\format{
+A MizerParams object
+}
 \source{
 {N.S. Jacobsen, M. Burgess and K.H. Andersen (2017):
 Efficiency of fisheries is increasing at the ecosystem level.

@@ -4,7 +4,9 @@
 \name{Benguela_params}
 \alias{Benguela_params}
 \title{Example MizerParams object for the Benguela current}
-\format{A MizerParams object}
+\format{
+A MizerParams object
+}
 \source{
 {N.S. Jacobsen, M. Burgess and K.H. Andersen (2017):
 Efficiency of fisheries is increasing at the ecosystem level.
