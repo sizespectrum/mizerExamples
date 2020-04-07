@@ -1,0 +1,31 @@
+---
+title: "Mizer Example Calibrated Food-webs"
+output: html_document
+---
+```{r include=FALSE}
+  library(mizer)
+  library(mizerExamples)
+```
+
+Mizer includes a number of calibrated multi-species systems:
+
+ * North Sea (`NS_param` from Blanchard et al, 2014; included with the mizer package). This calibration is made with a species-specific interaction matrix and gear. **Note of caution**: this calibration is done with eRepro=1.  This means that simulations overestimates reproduction severely, and the calibration should be used with caution.
+ * North Sea (`NorthSea_params`), Baltic Sea (`Baltic_params`), Benguela current (`Benguela_params`), North East US Continental Shelf (`NEUSCS_params`), and the Barents Sea (`Barents_params`) (from Jacobsen et al, 2016). These systems are calibrated with purely size-based predation, i.e., no species-specific interactions. They are set up with three fishing gears targeting small, medium and large species. 
+
+The models are available as MizerParams objects. Importing, running, and plotting is as simple as:
+
+```{r}
+  param = Barents_params
+  sim = project(param)
+  plot(sim)
+```
+
+The models are calibated to specific efforts on each species. For example, the Barents Sea has three fleets: small, medium, and large. Simulating with the calibrated efforts is done by:
+```{r}
+  sim = project(Barents_params, effort = c(small = 1.1, medium = 0.5, large = 0.75))
+```
+
+The specific efforts are described in the help pages for each calibrated model.
+
+
+
