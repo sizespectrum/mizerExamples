@@ -82,7 +82,7 @@
     
 <p>Mizer includes a number of calibrated multi-species systems:</p>
 <ul>
-<li>North Sea (<code>NS_param</code> from Blanchard et al, 2014; included with the mizer package). This calibration is made with a species-specific interaction matrix and gear. <strong>Note of caution</strong>: this calibration is done with eRepro=1. This means that simulations overestimates reproduction severely, and the calibration should be used with caution.</li>
+<li>North Sea (<code>NS_param</code> from Blanchard et al, 2014; included with the mizer package). This calibration is made with a species-specific interaction matrix and gear. <strong>Note of caution</strong>: this calibration is done with eRepro=1. This means that reproduction is close to the maximum reproduction <code>R_max</code> and thus the model may be less sensitive to fishing than is realistic, and the calibration should be used with caution.</li>
 <li>North Sea (<code>NorthSea_params</code>), Baltic Sea (<code>Baltic_params</code>), Benguela current (<code>Benguela_params</code>), North East US Continental Shelf (<code>NEUSCS_params</code>), and the Barents Sea (<code>Barents_params</code>) (from Jacobsen et al, 2016). These systems are calibrated with purely size-based predation, i.e., no species-specific interactions. They are set up with three fishing gears targeting small, medium and large species.</li>
 </ul>
 <p>The models are available as MizerParams objects. Running, and plotting is as simple as:</p>
