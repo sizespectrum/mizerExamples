@@ -8,10 +8,12 @@ for (file in list.files("data")) {
     print(name)
     if (is(get(name), "MizerParams")) {
         params <- upgradeParams(get(name))
-        # Uncomment the next two line if we want to run to new steady state
+        # Uncomment the next two lines if we want to run to new steady state
         # sim <- project(params)
-        # assign(name, setInitialValues(params, sim))
+        # params <- setInitialValues(params, sim)
+        # 
         # We save with version 2 to be backwards compatible to R < 3.5
+        assign(name, params)
         save(list = name, file = path, version = 2)
     }
 }
