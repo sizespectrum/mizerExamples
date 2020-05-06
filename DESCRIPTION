@@ -7,7 +7,7 @@ Description: Please contribute your mizer model for others to explore and give f
 License: GPL-3
 Depends:
     R (>= 3.1),
-    mizer (>= 2.0.0)
+    mizer (>= 2.0.1)
 Suggests: 
     pkgdown,
     rmarkdown,
