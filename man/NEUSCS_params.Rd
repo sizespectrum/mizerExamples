@@ -21,7 +21,9 @@ constant (gamma) between species. Calibrated to efforts
 }
 \examples{
 \dontrun{
-sim = project(NEUSCS_params, effort = c(small = 0.4, medium = 0.3, large = 0.25))
+sim = project(NEUSCS_params,
+              effort = c(small = 0.4, medium = 0.3, large = 0.25),
+              progress_bar = FALSE)
 plot(sim)
 }
 }

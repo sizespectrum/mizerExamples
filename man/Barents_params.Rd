@@ -21,7 +21,9 @@ constant (gamma) between species. Calibrated to efforts
 }
 \examples{
 \dontrun{
-sim = project(Barents_params, effort = c(small = 1.1, medium = 0.5, large = 0.75))
+sim = project(Barents_params,
+              effort = c(small = 1.1, medium = 0.5, large = 0.75),
+              progress_bar = FALSE)
 plot(sim)
 }
 }

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mizerExamples
+# mizerExamples <a href='https://sizespectrum.org/mizerExamples'><img src='man/figures/logo.png' align="right" height="240" /></a>
 
 <!-- badges: start -->
 

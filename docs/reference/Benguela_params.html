@@ -8,12 +8,19 @@
 
 <title>Example MizerParams object for the Benguela current — Benguela_params • mizerExamples</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -45,6 +52,11 @@ interactions. Set up with three fishing gears targeting small, medium and
 large species. Vulnerabilities are represented by changing the clearance rate
 constant (gamma) between species. Calibrated to efforts
 effort = c(small = 0.13, medium = 0.05, large = 0.45)." />
+<meta property="og:image" content="https://sizespectrum.org/mizerExamples/reference/figures/logo.png" />
+<meta property="og:image:alt" content="mizerExamples: mizer models contributed by the community" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@mizer_model" />
+<meta name="twitter:site" content="@mizer_model" />
 
 
 
@@ -83,12 +95,6 @@ effort = c(small = 0.13, medium = 0.05, large = 0.45)." />
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../articles/mizerExamples.html">Get started</a>
 </li>
 <li>
@@ -97,8 +103,17 @@ effort = c(small = 0.13, medium = 0.05, large = 0.45)." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="https://blog.mizer.sizespectrum.org">Blog</a>
+</li>
+<li>
+  <a href="https://twitter.com/mizer_model">
+    <span class="fab fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="https://github.com/sizespectrum/mizerExamples/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -147,12 +162,15 @@ Fish and Fisheries 18(2) 199- 211. doi:10.1111/faf.12171.</p>
 <code><a href='NorthSea_params.html'>NorthSea_params</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='no'>sim</span> <span class='kw'>=</span> <span class='fu'>project</span>(<span class='no'>Benguela_params</span>, <span class='kw'>effort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>small</span> <span class='kw'>=</span> <span class='fl'>0.13</span>, <span class='kw'>medium</span> <span class='kw'>=</span> <span class='fl'>0.05</span>, <span class='kw'>large</span> <span class='kw'>=</span> <span class='fl'>0.45</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>sim</span>)
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+<span class='va'>sim</span> <span class='op'>=</span> <span class='fu'><a href='https://sizespectrum.org/mizer/reference/project.html'>project</a></span><span class='op'>(</span><span class='va'>Benguela_params</span>,
+              effort <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>small <span class='op'>=</span> <span class='fl'>0.13</span>, medium <span class='op'>=</span> <span class='fl'>0.05</span>, large <span class='op'>=</span> <span class='fl'>0.45</span><span class='op'>)</span>,
+              progress_bar <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>sim</span><span class='op'>)</span>
+</div><div class='img'><img src='Benguela_params-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs" id="pkgdown-sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
@@ -166,7 +184,7 @@ Fish and Fisheries 18(2) 199- 211. doi:10.1111/faf.12171.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

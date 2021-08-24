@@ -4,3 +4,6 @@
 ^README\.Rmd$
 ^cran-comments\.md$
 ^maintainer_scripts\.R$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

@@ -1,0 +1,40 @@
+home:
+  title: Examples of mizer models
+  description: A collection of example mizer models contributed by the mizer community
+
+url: https://sizespectrum.org/mizerExamples
+
+template:
+  params:
+    bootswatch: cerulean
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "mizerExamples: mizer models contributed by the community"
+    twitter:
+      site: "@mizer_model"
+      card: summary
+
+toc:
+  depth: 3
+
+navbar:
+  structure:
+    left: [intro, reference]
+    right: [blog, twitter, github]
+  components:
+    home: ~
+    blog:
+      text: Blog
+      href: https://blog.mizer.sizespectrum.org
+    twitter:
+       icon: "fab fa-twitter fa-lg"
+       href: https://twitter.com/mizer_model
+
+
+destination: docs
+
+reference:
+- title: models
+  contents:
+  - ends_with("params")
